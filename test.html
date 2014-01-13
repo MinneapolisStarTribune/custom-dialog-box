@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Sandbox</title>
+    <script type="text/javascript" src="customDialogBox.js"></script>
+    <link rel="stylesheet" type="text/css" href="customDialogBox.css"></script>
+</head>
+
+<body>
+    <p>Pre-existing content.</p>
+    <button onclick="displayDialog()">Dialog!</button>
+
+    <script>
+        var dialog = new CustomDialogBox();
+        dialog.create()
+            .setText('This is a simple dialog box.')
+            .addButton(
+                'confirm',
+                'OK',
+                function() {
+                    dialog.hide();
+            })
+            .addButton(
+                'cancel',
+                'Cancel',
+                function() {
+                    dialog.hide();
+            })
+        ;
+
+        window.addEventListener('resize', function() {
+            dialog.centerPosition();
+        });
+
+        dialog.backdrop.addEventListener('click', function() {
+            dialog.hide();
+        });
+
+        function displayDialog() {
+            dialog.show();
+        }
+    </script>
+</body>
+</html>

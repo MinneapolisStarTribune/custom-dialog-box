@@ -1,0 +1,28 @@
+.hidden {
+    display: none;
+}
+
+.dialogBox {
+    background: #fff;
+    border: 1px solid #999;
+    border-radius: 2px;
+    padding: 10px;
+    width: 300px;
+    position: absolute;
+    z-index: 6000000;
+}
+
+#customDialogBoxBackgroundContainer {
+    background: #000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    filter: alpha(opacity=10);
+    -khtml-opacity: 0.1;
+    -moz-opacity: 0.1;
+    opacity: 0.1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5999999;
+}
